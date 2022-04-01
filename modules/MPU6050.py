@@ -6,7 +6,7 @@ if ("KidBright32" in machine) or ("KidMotor V4" in machine):
 elif "Mbits" in machine:
     i2c1 = I2C(0, scl=Pin(21), sda=Pin(22), freq=400000)
 else:
-    i2c1 = I2C(0, scl=Pin(5), sda=Pin(4), freq=400000)
+    i2c1 = I2C(1, scl=Pin(5), sda=Pin(4), freq=400000)
 
 class MPU6050():
     def __init__(self, addr=0x68):
